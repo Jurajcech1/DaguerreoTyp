@@ -17,3 +17,24 @@
 [2015-12-15 14:36:55 -0800 Jurajs-MacBook-Pro.local (54748)] INFO : Installing Rails 4 view instrumentation
 [2015-12-15 14:36:55 -0800 Jurajs-MacBook-Pro.local (54748)] INFO : Installing Rails 4 Error instrumentation
 [2015-12-15 14:36:55 -0800 Jurajs-MacBook-Pro.local (54748)] INFO : Finished instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] WARN : No configuration file found. Working directory = /Users/jurajcech/Desktop/instagram_clone/DaguerreoTyp
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] WARN : Looked in these locations (based on defaults): /Users/jurajcech/Desktop/instagram_clone/DaguerreoTyp/config/newrelic.yml, /Users/jurajcech/Desktop/instagram_clone/DaguerreoTyp/newrelic.yml, /Users/jurajcech/Desktop/instagram_clone/DaguerreoTyp/config/newrelic.yml, /Users/jurajcech/Desktop/instagram_clone/DaguerreoTyp/newrelic.yml, /Users/jurajcech/.newrelic/newrelic.yml, /Users/jurajcech/newrelic.yml
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Environment: development
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Dispatcher: webrick
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Application: development
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing ActiveJob instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing Net instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing Rails 4 view instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Finished instrumentation
+[2015-12-15 15:29:40 -0800 Jurajs-MacBook-Pro.local (55824)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-15 15:29:44 -0800 Jurajs-MacBook-Pro.local (55824)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-15 15:29:44 -0800 Jurajs-MacBook-Pro.local (55824)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

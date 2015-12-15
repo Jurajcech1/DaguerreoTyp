@@ -1,6 +1,6 @@
 # DaguerreoTyp
 
-[Heroku link][heroku] **NB:** Will put link here
+[Heroku link][heroku] http://daguerreotyp.herokuapp.com
 
 [heroku]: http://www.herokuapp.com
 
