@@ -21,3 +21,5 @@ PostStore.__onDispatch = function (payload) {
       break;
   }
 };
+
+module.exports = PostStore;

@@ -1,4 +1,4 @@
-var ApiActions = require('../actions/api_actions')
+var ApiActions = require('../actions/api_actions.js')
 
 var ApiUtil = {
   fetchAllPosts: function() {
