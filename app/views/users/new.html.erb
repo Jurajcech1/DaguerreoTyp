@@ -9,15 +9,15 @@
       name="authenticity_token"
       value="<%= form_authenticity_token %>">
 
-    <label for="user_username">User Name</label>
     <input type="text"
+           placeholder="username"
            name="user[username]"
            id="user_username"
            value="<%= @user.username %>">
     <br>
 
-    <label for="user_password">Password</label>
     <input type="password"
+           placeholder="password"
            name="user[password]"
            id="user_password"
            value="<%= @user.password %>">
