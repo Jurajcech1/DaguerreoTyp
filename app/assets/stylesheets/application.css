@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+.logins {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logins_header {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+}
+
+.logins_switch {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html {
+  background: url(http://img05.deviantart.net/5ca5/i/2014/094/e/b/steampunk_concept_by_tyleredlinart-d7czbvr.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: Steampunk;
+  src: url('http://www.fontsaddict.com/fontface/steampunk-font-by-hannarb.ttf');
+}
