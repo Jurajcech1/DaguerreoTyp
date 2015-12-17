@@ -19708,8 +19708,8 @@
 	    return React.createElement(
 	      'ul',
 	      null,
-	      posts,
-	      React.createElement(UploadButton, null)
+	      React.createElement(UploadButton, null),
+	      posts
 	    );
 	  }
 	});
@@ -19723,13 +19723,15 @@
 	var React = __webpack_require__(1);
 	
 	var IndexItem = React.createClass({
-	  displayName: 'IndexItem',
+	  displayName: "IndexItem",
 	
 	  render: function () {
+	    console.log(this.props.post.picture_URL);
+	    var public_id = this.props.post.public_id;
 	    return React.createElement(
-	      'li',
+	      "li",
 	      null,
-	      React.createElement('img', { src: this.props.post.picture_URL })
+	      React.createElement("img", { src: "http://res.cloudinary.com/dbmqufwhv/image/upload/w_280,h_280/" + public_id + ".png" })
 	    );
 	  }
 	});
@@ -26509,7 +26511,7 @@
 	    $.ajax({
 	      url: "api/posts",
 	      method: 'POST',
-	      data: { post: { image_URL: post.url, public_id: post.public_id } },
+	      data: { post: { picture_URL: post.url, public_id: post.public_id } },
 	      success: function (newPost) {
 	        ApiActions.receiveNewPost(newPost);
 	      }
@@ -31248,6 +31250,18 @@
 	        ApiUtil.createNewPost(results[0]);
 	      }
 	    });
+	  },
+	
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'button',
+	        { onClick: this.upload },
+	        'Make a DaguerreoTyp'
+	      )
+	    );
 	  }
 	
 	});

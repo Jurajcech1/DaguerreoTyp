@@ -11,6 +11,14 @@ var UploadButton = React.createClass({
     });
   },
 
+  render: function() {
+    return(
+      <div>
+        <button onClick={this.upload}>Make a DaguerreoTyp</button>
+      </div>
+    );
+  }
+
 
 });
 

@@ -14,7 +14,7 @@ var ApiUtil = {
     $.ajax({
       url: "api/posts",
       method: 'POST',
-      data: {post: {image_URL: post.url, public_id: post.public_id}},
+      data: {post: {picture_URL: post.url, public_id: post.public_id}},
       success: function (newPost) {
         ApiActions.receiveNewPost(newPost);
       }

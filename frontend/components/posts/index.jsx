@@ -25,8 +25,8 @@ var Index = React.createClass({
 
     return(
       <ul>
-        {posts}
         <UploadButton/>
+        {posts}
       </ul>
     );
   }
