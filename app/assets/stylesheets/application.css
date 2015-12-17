@@ -43,8 +43,3 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
-@font-face {
-  font-family: Steampunk;
-  src: url('http://www.fontsaddict.com/fontface/steampunk-font-by-hannarb.ttf');
-}
