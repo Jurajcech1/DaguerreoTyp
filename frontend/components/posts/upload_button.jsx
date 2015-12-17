@@ -1,12 +1,16 @@
 var React = require('react');
 var ApiUtil = require('../../util/api_util.js');
+var History = require('react-router').History;
 
 var UploadButton = React.createClass({
+  mixins: [History],
+
   upload: function(e) {
     e.preventDefault();
+    var that = this;
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
       if(!error) {
-        ApiUtil.createNewPost(results[0]);
+        that.history.pushState(null, "posts/new", results[0])
       }
     });
   },

@@ -18,16 +18,23 @@ var Index = React.createClass({
     ApiUtil.fetchAllPosts();
   },
 
+  componentWillUnmount: function() {
+    this.postUpdater.remove();
+  },
+
   render: function() {
     var posts = this.state.posts.map(function(post) {
       return <IndexItem key={post.id} post={post} />;
     });
 
     return(
-      <ul>
+      <div>
         <UploadButton/>
-        {posts}
-      </ul>
+        <ul>
+          {posts}
+        </ul>
+        {this.props.children}
+      </div>
     );
   }
 });

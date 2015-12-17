@@ -36,6 +36,14 @@
   transform: translate(-50%, -50%);
 }
 
+.indexPostPicture {
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
 html {
   background: url(http://img05.deviantart.net/5ca5/i/2014/094/e/b/steampunk_concept_by_tyleredlinart-d7czbvr.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;

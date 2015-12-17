@@ -10,11 +10,11 @@ var ApiUtil = {
     });
   },
 
-  createNewPost: function(post) {
+  createNewPost: function(post, caption) {
     $.ajax({
       url: "api/posts",
       method: 'POST',
-      data: {post: {picture_URL: post.url, public_id: post.public_id}},
+      data: {post: {picture_URL: post.secure_url, public_id: post.public_id, caption: caption}},
       success: function (newPost) {
         ApiActions.receiveNewPost(newPost);
       }

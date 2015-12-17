@@ -5,6 +5,8 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
+var PostForm = require('./components/posts/post_form.jsx');
+var PostShow = require('./components/posts/post_show.jsx');
 
 var App = React.createClass({
   render: function () {
@@ -20,6 +22,8 @@ var App = React.createClass({
 var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Index}/>
+    <Route path="posts/new" component={PostForm}/>
+    <Route path="posts/:postId" component={PostShow}/>
   </Route>
 );
 
