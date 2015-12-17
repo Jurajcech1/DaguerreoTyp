@@ -7,6 +7,13 @@ ApiActions = {
       actionType: PostConstants.POSTS_RECEIVED,
       posts: posts
     });
+  },
+
+  receiveNewPost: function (post) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.NEW_POST_RECEIVED,
+      post: post
+    });
   }
 };
 

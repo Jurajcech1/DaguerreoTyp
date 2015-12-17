@@ -2,6 +2,7 @@ var React = require('react');
 var IndexItem = require('./index_item.jsx');
 var PostStore = require('../../stores/post.js');
 var ApiUtil = require('../../util/api_util.js');
+var UploadButton = require('./upload_button.jsx');
 
 var Index = React.createClass({
   getInitialState: function() {
@@ -25,6 +26,7 @@ var Index = React.createClass({
     return(
       <ul>
         {posts}
+        <UploadButton/>
       </ul>
     );
   }

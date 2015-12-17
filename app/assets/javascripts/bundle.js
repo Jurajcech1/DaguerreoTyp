@@ -19682,6 +19682,7 @@
 	var IndexItem = __webpack_require__(160);
 	var PostStore = __webpack_require__(161);
 	var ApiUtil = __webpack_require__(183);
+	var UploadButton = __webpack_require__(235);
 	
 	var Index = React.createClass({
 	  displayName: 'Index',
@@ -19707,7 +19708,8 @@
 	    return React.createElement(
 	      'ul',
 	      null,
-	      posts
+	      posts,
+	      React.createElement(UploadButton, null)
 	    );
 	  }
 	});
@@ -19749,6 +19751,10 @@
 	  _posts = posts.slice();
 	};
 	
+	var addPost = function (post) {
+	  _posts.push(post);
+	};
+	
 	PostStore.all = function () {
 	  return _posts.slice();
 	};
@@ -19757,6 +19763,10 @@
 	  switch (payload.actionType) {
 	    case PostConstants.POSTS_RECEIVED:
 	      resetPosts(payload.posts);
+	      PostStore.__emitChange();
+	      break;
+	    case PostConstants.NEW_POST_RECEIVED:
+	      addPost(payload.post);
 	      PostStore.__emitChange();
 	      break;
 	  }
@@ -26473,7 +26483,8 @@
 /***/ function(module, exports) {
 
 	var PostConstants = {
-	  POSTS_RECEIVED: 'POSTS_RECEIVED'
+	  POSTS_RECEIVED: 'POSTS_RECEIVED',
+	  NEW_POST_RECEIVED: 'NEW_POST_RECEIVED'
 	};
 	
 	module.exports = PostConstants;
@@ -26490,6 +26501,17 @@
 	      url: "api/posts",
 	      success: function (posts) {
 	        ApiActions.receiveAllPosts(posts);
+	      }
+	    });
+	  },
+	
+	  createNewPost: function (post) {
+	    $.ajax({
+	      url: "api/posts",
+	      method: 'POST',
+	      data: { post: { image_URL: post.url, public_id: post.public_id } },
+	      success: function (newPost) {
+	        ApiActions.receiveNewPost(newPost);
 	      }
 	    });
 	  }
@@ -26509,6 +26531,13 @@
 	    AppDispatcher.dispatch({
 	      actionType: PostConstants.POSTS_RECEIVED,
 	      posts: posts
+	    });
+	  },
+	
+	  receiveNewPost: function (post) {
+	    AppDispatcher.dispatch({
+	      actionType: PostConstants.NEW_POST_RECEIVED,
+	      post: post
 	    });
 	  }
 	};
@@ -31201,6 +31230,29 @@
 	
 	exports['default'] = useBasename;
 	module.exports = exports['default'];
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ApiUtil = __webpack_require__(183);
+	
+	var UploadButton = React.createClass({
+	  displayName: 'UploadButton',
+	
+	  upload: function (e) {
+	    e.preventDefault();
+	    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function (error, results) {
+	      if (!error) {
+	        ApiUtil.createNewPost(results[0]);
+	      }
+	    });
+	  }
+	
+	});
+	
+	module.exports = UploadButton;
 
 /***/ }
 /******/ ]);
