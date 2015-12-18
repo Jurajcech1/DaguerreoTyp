@@ -30,9 +30,11 @@ var Index = React.createClass({
     return(
       <div>
         <UploadButton/>
-        <ul>
-          {posts}
-        </ul>
+        <div className="post_index_ul">
+          <ul>
+            {posts}
+          </ul>
+        </div>
         {this.props.children}
       </div>
     );

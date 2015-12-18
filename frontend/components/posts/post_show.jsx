@@ -27,9 +27,11 @@ var Post = React.createClass({
   render: function() {
     var post = this.state.post
     return(
-      <div>
-        <h3>{post.caption}</h3>
-        <img src={post.picture_URL} />
+      <div className="show_div">
+        <img className="post_show_picture" src={post.picture_URL} />
+        <div className="caption_container">
+          <h3 className="post_show_caption">{post.caption}</h3>
+        </div>
       </div>
     );
   }

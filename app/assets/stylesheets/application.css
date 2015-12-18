@@ -38,6 +38,36 @@
 
 .indexPostPicture {
   float: left;
+  padding: 20px;
+}
+
+.post_index_ul {
+  width: 1000px;
+  position: relative;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.post_show_caption {
+  float: left;
+  padding-left: 30px;
+}
+
+.post_show_picture {
+  float: left;
+}
+
+.caption_container {
+  float: left;
+  padding-right: 100px;
+}
+
+.show_div {
+  position: relative;
+  width: 1000px;
+  height: 100%;
+  background: white;
 }
 
 ul {

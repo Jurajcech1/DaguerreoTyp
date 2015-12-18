@@ -19718,9 +19718,13 @@
 	      null,
 	      React.createElement(UploadButton, null),
 	      React.createElement(
-	        'ul',
-	        null,
-	        posts
+	        'div',
+	        { className: 'post_index_ul' },
+	        React.createElement(
+	          'ul',
+	          null,
+	          posts
+	        )
 	      ),
 	      this.props.children
 	    );
@@ -19748,7 +19752,6 @@
 	  },
 	
 	  render: function () {
-	    console.log(this.props.post.picture_URL);
 	    var public_id = this.props.post.public_id;
 	    return React.createElement(
 	      'li',
@@ -31648,13 +31651,17 @@
 	    var post = this.state.post;
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'show_div' },
+	      React.createElement('img', { className: 'post_show_picture', src: post.picture_URL }),
 	      React.createElement(
-	        'h3',
-	        null,
-	        post.caption
-	      ),
-	      React.createElement('img', { src: post.picture_URL })
+	        'div',
+	        { className: 'caption_container' },
+	        React.createElement(
+	          'h3',
+	          { className: 'post_show_caption' },
+	          post.caption
+	        )
+	      )
 	    );
 	  }
 	});

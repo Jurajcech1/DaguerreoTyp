@@ -11,7 +11,6 @@ var IndexItem = React.createClass({
   },
 
   render: function() {
-    console.log(this.props.post.picture_URL);
     var public_id = this.props.post.public_id;
     return(
       <li className="indexPostPicture" onClick={this.handleClick}>
