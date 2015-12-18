@@ -3,6 +3,7 @@ var IndexItem = require('./index_item.jsx');
 var PostStore = require('../../stores/post.js');
 var ApiUtil = require('../../util/api_util.js');
 var UploadButton = require('./upload_button.jsx');
+var UserStore = require('../../stores/user.js');
 
 var Index = React.createClass({
   getInitialState: function() {
@@ -15,7 +16,11 @@ var Index = React.createClass({
 
   componentDidMount: function() {
     this.postUpdater = PostStore.addListener(this._updatePosts);
-    ApiUtil.fetchAllPosts();
+    ApiUtil.fetchAllPosts(this.props.userId);
+  },
+
+  componentWillReceiveProps: function(props) {
+    ApiUtil.fetchAllPosts(props.userId);
   },
 
   componentWillUnmount: function() {

@@ -20,6 +20,10 @@ var Post = React.createClass({
     ApiUtil.fetchSinglePost(parseInt(this.props.params.postId));
   },
 
+  componentWillReceiveProps: function(props) {
+    ApiUtil.fetchSinglePost(parseInt(props.params.postId));
+  },
+
   componentWillUnmount: function() {
     this.showPostListener.remove();
   },
@@ -27,11 +31,9 @@ var Post = React.createClass({
   render: function() {
     var post = this.state.post
     return(
-      <div className="show_div">
+      <div className="show_div clearfix">
         <img className="post_show_picture" src={post.picture_URL} />
-        <div className="caption_container">
-          <h3 className="post_show_caption">{post.caption}</h3>
-        </div>
+        <figcaption className="post_show_caption">{post.caption}</figcaption>
       </div>
     );
   }

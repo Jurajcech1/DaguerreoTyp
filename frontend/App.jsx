@@ -7,6 +7,7 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 var PostForm = require('./components/posts/post_form.jsx');
 var PostShow = require('./components/posts/post_show.jsx');
+var User = require('./components/users/user.jsx');
 
 var App = React.createClass({
   render: function () {
@@ -21,7 +22,7 @@ var App = React.createClass({
 
 var routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={Index}/>
+    <Route path="users/:userId" component={User}/>
     <Route path="posts/new" component={PostForm}/>
     <Route path="posts/:postId" component={PostShow}/>
   </Route>
@@ -30,3 +31,4 @@ var routes = (
 document.addEventListener("DOMContentLoaded", function () {
   ReactDOM.render(<Router>{routes}</Router>, document.getElementById('content'));
 });
+// <IndexRoute component={Index}/>

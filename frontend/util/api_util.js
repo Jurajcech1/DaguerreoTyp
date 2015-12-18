@@ -1,9 +1,10 @@
 var ApiActions = require('../actions/api_actions.js')
 
 var ApiUtil = {
-  fetchAllPosts: function() {
+  fetchAllPosts: function(id) {
     $.ajax({
       url: "api/posts",
+      data: {author_id: id},
       success: function (posts) {
         ApiActions.receiveAllPosts(posts);
       }
@@ -26,6 +27,15 @@ var ApiUtil = {
       data: {post: {picture_URL: post.secure_url, public_id: post.public_id, caption: caption}},
       success: function (newPost) {
         ApiActions.receiveNewPost(newPost);
+      }
+    });
+  },
+
+  fetchUser: function(id) {
+    $.ajax({
+      url: "api/users/" + id,
+      success: function (user) {
+        ApiActions.receiveUser(user);
       }
     });
   }
