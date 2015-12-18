@@ -10,6 +10,15 @@ var ApiUtil = {
     });
   },
 
+  fetchSinglePost: function(id) {
+    $.ajax({
+      url: "api/posts/" + id,
+      success: function (post) {
+        ApiActions.receiveSinglePost(post);
+      }
+    });
+  },
+
   createNewPost: function(post, caption) {
     $.ajax({
       url: "api/posts",

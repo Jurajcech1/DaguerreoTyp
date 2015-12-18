@@ -19783,6 +19783,16 @@
 	  return _posts.slice();
 	};
 	
+	PostStore.find = function (id) {
+	  var thePost = "";
+	  _posts.forEach(function (post) {
+	    if (post.id === id) {
+	      thePost = post;
+	    }
+	  });
+	  return thePost;
+	};
+	
 	PostStore.__onDispatch = function (payload) {
 	  switch (payload.actionType) {
 	    case PostConstants.POSTS_RECEIVED:
@@ -26508,7 +26518,8 @@
 
 	var PostConstants = {
 	  POSTS_RECEIVED: 'POSTS_RECEIVED',
-	  NEW_POST_RECEIVED: 'NEW_POST_RECEIVED'
+	  NEW_POST_RECEIVED: 'NEW_POST_RECEIVED',
+	  POST_RECEIVED: 'POST_RECEIVED'
 	};
 	
 	module.exports = PostConstants;
@@ -26525,6 +26536,15 @@
 	      url: "api/posts",
 	      success: function (posts) {
 	        ApiActions.receiveAllPosts(posts);
+	      }
+	    });
+	  },
+	
+	  fetchSinglePost: function (id) {
+	    $.ajax({
+	      url: "api/posts/" + id,
+	      success: function (post) {
+	        ApiActions.receiveSinglePost(post);
 	      }
 	    });
 	  },
@@ -26555,6 +26575,13 @@
 	    AppDispatcher.dispatch({
 	      actionType: PostConstants.POSTS_RECEIVED,
 	      posts: posts
+	    });
+	  },
+	
+	  receiveSinglePost: function (post) {
+	    AppDispatcher.dispatch({
+	      actionType: PostConstants.POSTS_RECEIVED,
+	      posts: [post]
 	    });
 	  },
 	
@@ -31590,13 +31617,35 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
+	var PostStore = __webpack_require__(161);
+	var ApiUtil = __webpack_require__(183);
 	
 	var Post = React.createClass({
 	  displayName: 'Post',
 	
-	  render: function () {
-	    var post = this._post();
+	  getStateFromStore: function () {
+	    return { post: PostStore.find(parseInt(this.props.params.postId)) };
+	  },
 	
+	  getInitialState: function () {
+	    return this.getStateFromStore();
+	  },
+	
+	  _onChange: function () {
+	    this.setState(this.getStateFromStore());
+	  },
+	
+	  componentDidMount: function () {
+	    this.showPostListener = PostStore.addListener(this._onChange);
+	    ApiUtil.fetchSinglePost(parseInt(this.props.params.postId));
+	  },
+	
+	  componentWillUnmount: function () {
+	    this.showPostListener.remove();
+	  },
+	
+	  render: function () {
+	    var post = this.state.post;
 	    return React.createElement(
 	      'div',
 	      null,

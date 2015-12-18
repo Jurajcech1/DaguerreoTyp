@@ -9,6 +9,13 @@ ApiActions = {
     });
   },
 
+  receiveSinglePost: function (post) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.POSTS_RECEIVED,
+      posts: [post]
+    });
+  },
+
   receiveNewPost: function (post) {
     AppDispatcher.dispatch({
       actionType: PostConstants.NEW_POST_RECEIVED,

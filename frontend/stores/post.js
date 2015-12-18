@@ -17,6 +17,16 @@ PostStore.all = function() {
   return _posts.slice();
 };
 
+PostStore.find = function(id) {
+  var thePost = "";
+  _posts.forEach(function(post) {
+    if (post.id === id) {
+      thePost = post;
+    }
+  });
+  return thePost;
+};
+
 PostStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case PostConstants.POSTS_RECEIVED:
