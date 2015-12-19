@@ -1,6 +1,7 @@
 var React = require('react');
 var PostStore = require('../../stores/post.js');
 var ApiUtil = require('../../util/api_util.js');
+var DeleteButton = require('./delete_button.jsx');
 
 var Post = React.createClass({
   getStateFromStore: function() {
@@ -32,6 +33,7 @@ var Post = React.createClass({
     var post = this.state.post
     return(
       <div className="show_div clearfix">
+        <DeleteButton post={post} />
         <img className="post_show_picture" src={post.picture_URL} />
         <figcaption className="post_show_caption">{post.caption}</figcaption>
       </div>

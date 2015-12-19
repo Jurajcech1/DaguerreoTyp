@@ -24,6 +24,13 @@ ApiActions = {
     });
   },
 
+  receiveDeletedPost: function (id) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.DELETE_POST,
+      id: id
+    });
+  },
+
   receiveUser: function (user) {
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,

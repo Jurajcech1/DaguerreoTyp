@@ -37,6 +37,10 @@ PostStore.__onDispatch = function (payload) {
       addPost(payload.post);
       PostStore.__emitChange();
       break;
+    case PostConstants.DELETE_POST:
+      deletePost(payload.id);
+      PostStore.__emitChange();
+      break;
   }
 };
 

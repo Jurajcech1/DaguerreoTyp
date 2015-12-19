@@ -31,6 +31,16 @@ var ApiUtil = {
     });
   },
 
+  destroyPost: function(id) {
+    $.ajax({
+      url: "api/posts/" + id,
+      method: 'DELETE',
+      success: function (response) {
+        ApiActions.receiveDeletedPost(response.id);
+      }
+    });
+  },
+
   fetchUser: function(id) {
     $.ajax({
       url: "api/users/" + id,

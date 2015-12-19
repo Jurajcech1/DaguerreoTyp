@@ -22,8 +22,6 @@ var UploadButton = React.createClass({
       </div>
     );
   }
-
-
 });
 
 module.exports = UploadButton;
