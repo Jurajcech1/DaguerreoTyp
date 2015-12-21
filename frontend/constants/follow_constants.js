@@ -1,0 +1,7 @@
+var FollowConstants = {
+  FOLLOWEES_RECEIVED: 'FOLLOWEES_RECEIVED',
+  FOLLOWEE_RECEIVED: 'FOLLOWEE_RECEIVED',
+  DELETE_FOLLOWEE: 'DELETE_FOLLOWEE'
+};
+
+module.exports = FollowConstants;

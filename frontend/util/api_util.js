@@ -50,6 +50,15 @@ var ApiUtil = {
     });
   },
 
+  fetchFollowees: function() {
+    $.ajax({
+      url: "api/follows",
+      success: function (followees) {
+        ApiActions.receiveFollowees(followees);
+      }
+    });
+  },
+
   createNewFollow: function(id) {
     $.ajax({
       url: "api/follows",
@@ -66,7 +75,7 @@ var ApiUtil = {
       url: "api/follows/" + id,
       method: 'DELETE',
       success: function (followee) {
-        ApiActions.receiveDeletedPost(followee);
+        ApiActions.receiveDeletedFollow(followee);
       }
     });
   }

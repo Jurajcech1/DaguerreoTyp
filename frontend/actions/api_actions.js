@@ -1,6 +1,7 @@
 var AppDispatcher = require('../dispatcher/dispatcher.js');
 var PostConstants = require('../constants/post_constants.js');
 var UserConstants = require('../constants/user_constants.js');
+var FollowConstants = require('../constants/follow_constants.js');
 
 ApiActions = {
   receiveAllPosts: function (posts) {
@@ -35,6 +36,27 @@ ApiActions = {
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,
       user: user
+    });
+  },
+
+  receiveFollowees: function (followees) {
+    AppDispatcher.dispatch({
+      actionType: FollowConstants.FOLLOWEES_RECEIVED,
+      followees: followees
+    });
+  },
+
+  receiveNewFollowee: function (followee) {
+    AppDispatcher.dispatch({
+      actionType: FollowConstants.FOLLOWEE_RECEIVED,
+      followee: followee
+    });
+  },
+
+  receiveDeletedFollow: function (followee) {
+    AppDispatcher.dispatch({
+      actionType: FollowConstants.DELETE_FOLLOWEE,
+      followee: followee
     });
   }
 };

@@ -20,6 +20,17 @@ class User < ActiveRecord::Base
   through: :follows,
   source: :follower
 
+  has_many :posts,
+  primary_key: :id,
+  foreign_key: :author_id,
+  class_name: "Post"
+
+
+  def self.find_latest(id)
+    user = self.find(id)
+    return user.posts.last
+  end
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

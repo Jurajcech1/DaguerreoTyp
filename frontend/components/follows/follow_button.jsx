@@ -48,3 +48,5 @@ var FollowButton = React.createClass({
     );
   }
 });
+
+module.exports = FollowButton;
