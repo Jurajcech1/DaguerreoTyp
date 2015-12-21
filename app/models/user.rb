@@ -7,6 +7,20 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  has_many :follows,
+  primary_key: :id,
+  foreign_key: :follower_id,
+  class_name: "Follow"
+
+  has_many :followees,
+  through: :follows,
+  source: :followee
+
+  has_many :followers,
+  through: :follows,
+  source: :follower
+
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
 

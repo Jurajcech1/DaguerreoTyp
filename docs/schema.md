@@ -29,7 +29,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 follower_id | integer   | not null, foreign key (references users), indexed
-followee_id | string    | not null, foreign key (references users), indexed
+followed_id | integer   | not null, foreign key (references users), indexed
 
 ## tags
 column name | data type | details

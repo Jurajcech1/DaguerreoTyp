@@ -1,4 +1,5 @@
 var React = require('react');
+var FollowButton = require('../follows/follow_button.jsx');
 
 var UserDetail = React.createClass({
   render: function() {
@@ -6,7 +7,10 @@ var UserDetail = React.createClass({
       return <div></div>
     }
     return(
-      <h2>{this.props.user.username}</h2>
+      <div>
+        <h2>{this.props.user.username}</h2>
+        <FollowButton user={this.props.user}/>
+      </div>
     );
   }
 });

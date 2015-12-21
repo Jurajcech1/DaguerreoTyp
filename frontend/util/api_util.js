@@ -48,6 +48,27 @@ var ApiUtil = {
         ApiActions.receiveUser(user);
       }
     });
+  },
+
+  createNewFollow: function(id) {
+    $.ajax({
+      url: "api/follows",
+      method: 'POST',
+      data: {follow: {followed_id: id}},
+      success: function (followee) {
+        ApiActions.receiveNewFollowee(followee);
+      }
+    });
+  },
+
+  destroyFollow: function(id) {
+    $.ajax({
+      url: "api/follows/" + id,
+      method: 'DELETE',
+      success: function (followee) {
+        ApiActions.receiveDeletedPost(followee);
+      }
+    });
   }
 };
 

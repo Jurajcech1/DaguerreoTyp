@@ -14,7 +14,7 @@ var IndexItem = React.createClass({
     var public_id = this.props.post.public_id;
     return(
       <li className="indexPostPicture" onClick={this.handleClick}>
-        <img src={"http://res.cloudinary.com/dbmqufwhv/image/upload/w_280,h_280/" + public_id + ".png"} />
+        <img src={"https://res.cloudinary.com/dbmqufwhv/image/upload/w_280,h_280/" + public_id + ".png"} />
       </li>
     );
   }
