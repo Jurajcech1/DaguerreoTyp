@@ -26,9 +26,8 @@ class User < ActiveRecord::Base
   class_name: "Post"
 
 
-  def self.find_latest(id)
-    user = self.find(id)
-    return user.posts.last
+  def find_latest
+    self.posts.last
   end
 
 

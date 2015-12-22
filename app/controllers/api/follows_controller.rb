@@ -1,6 +1,6 @@
 class Api::FollowsController < ApplicationController
   def index
-    @followed = current_user.followees
+    @followed = current_user.followees.includes(:posts)
     render :index
   end
 
