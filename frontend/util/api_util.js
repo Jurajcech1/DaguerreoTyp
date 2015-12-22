@@ -78,6 +78,16 @@ var ApiUtil = {
         ApiActions.receiveDeletedFollow(followee);
       }
     });
+  },
+
+  endSession: function() {
+    $.ajax({
+      url: "/session",
+      method: 'DELETE',
+      success: function (result) {
+        window.location.href = "/session/new";
+      }
+    });
   }
 };
 

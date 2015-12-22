@@ -15,8 +15,8 @@ User.create([{username: "Robert", password: "qwerty"}, {username: "John", passwo
   {username: "Juraj", password: "qwerty"}, {username: "Max", password: "qwerty"}])
 
 Post.create([{caption: "An awesome robot", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810284/Screen_Shot_2015-12-22_at_10.46.06_AM_f0qe16.png", public_id: "Screen_Shot_2015-12-22_at_10.46.06_AM_f0qe16", author_id: 1},
-  {caption: "Another awesome robot!", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810272/Screen_Shot_2015-12-22_at_10.48.09_AM_fwue8w.png", public_id: "creen_Shot_2015-12-22_at_10.48.09_AM_fwue8w", author_id: 1},
-  {caption: "Two different robots!", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810266/Screen_Shot_2015-12-22_at_10.48.23_AM_p01vvo.png", public_id: "Screen_Shot_2015-12-22_at_10.48.23_AM_p01vvo.png", author_id: 2},
+  {caption: "Another awesome robot!", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810272/Screen_Shot_2015-12-22_at_10.48.09_AM_fwue8w.png", public_id: "Screen_Shot_2015-12-22_at_10.48.09_AM_fwue8w", author_id: 1},
+  {caption: "Two different robots!", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810266/Screen_Shot_2015-12-22_at_10.48.23_AM_p01vvo.png", public_id: "Screen_Shot_2015-12-22_at_10.48.23_AM_p01vvo", author_id: 2},
   {caption: "Robot faces", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810256/Screen_Shot_2015-12-22_at_10.48.31_AM_hnbigm.png", public_id: "Screen_Shot_2015-12-22_at_10.48.31_AM_hnbigm", author_id: 3},
   {caption: "Robots with hats!", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810218/Screen_Shot_2015-12-22_at_10.47.57_AM_cau7vx.png", public_id: "Screen_Shot_2015-12-22_at_10.47.57_AM_cau7vx", author_id: 4},
   {caption: "Entomology robot!", picture_URL: "https://res.cloudinary.com/dbmqufwhv/image/upload/v1450810214/Screen_Shot_2015-12-22_at_10.49.22_AM_becsyt.png", public_id: "Screen_Shot_2015-12-22_at_10.49.22_AM_becsyt", author_id: 5},

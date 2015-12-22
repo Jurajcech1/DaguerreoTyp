@@ -2,7 +2,6 @@ var React = require('react');
 var IndexItem = require('./index_item.jsx');
 var PostStore = require('../../stores/post.js');
 var ApiUtil = require('../../util/api_util.js');
-var UploadButton = require('./upload_button.jsx');
 var UserStore = require('../../stores/user.js');
 
 var Index = React.createClass({
@@ -34,7 +33,6 @@ var Index = React.createClass({
 
     return(
       <div>
-        <UploadButton/>
         <div className="post_index_ul">
           <ul>
             {posts}

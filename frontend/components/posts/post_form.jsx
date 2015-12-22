@@ -25,7 +25,7 @@ var PostForm = React.createClass({
   },
 
   redirectToIndex: function() {
-    this.history.pushState(null, "/")
+    this.history.pushState(null, "users/" + window.current_userid);
   },
 
   render: function() {
