@@ -7,7 +7,7 @@ var UserDetail = React.createClass({
       return <div></div>
     }
     return(
-      <div>
+      <div id="user_detail">
         <h2>{this.props.user.username}</h2>
         <FollowButton user={this.props.user}/>
       </div>
