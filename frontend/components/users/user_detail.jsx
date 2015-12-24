@@ -8,7 +8,7 @@ var UserDetail = React.createClass({
     }
     return(
       <div id="user_detail">
-        <h2>{this.props.user.username}</h2>
+        <h2 className="user_detail_username">{this.props.user.username}</h2>
         <FollowButton user={this.props.user}/>
       </div>
     );

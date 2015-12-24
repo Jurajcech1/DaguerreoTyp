@@ -217,6 +217,44 @@ html {
   border-color: #D4C47F;
 }
 
+#user_detail {
+  height: 130px;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.74);
+  margin-left: 210px;
+  margin-bottom: 40px;
+  border-color: rgba(16, 78, 52, 0.27);
+  border-style: solid;
+  border-width: 12px;
+  border-radius: 7px;
+}
+
+.user_detail_username {
+  font-size: 50px;
+  float: left;
+  padding: 20px;
+  margin-left: 50px;
+}
+
+.follow_button {
+  float: left;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: 23px;
+  margin-left: 240px;
+  border-style: solid;
+  border-radius: 9px;
+  border-color: rgba(0, 0, 0, 0.18);
+  border-width: 2px;
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.follow_button:hover {
+  background-color: rgba(245, 21, 37, 0.35);
+}
+
 ul {
   list-style-type: none;
   width: 100%;

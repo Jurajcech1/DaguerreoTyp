@@ -42,7 +42,7 @@ var FollowButton = React.createClass({
 
   render: function() {
     return(
-      <div onClick={this.handleClick}>
+      <div className="follow_button" onClick={this.handleClick}>
         {this.state.follow}
       </div>
     );
