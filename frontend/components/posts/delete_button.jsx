@@ -13,11 +13,16 @@ var DeleteButton = React.createClass({
   },
 
   render: function() {
-    return(
-      <div>
-        <button onClick={this.deletePost}>Delete Picture</button>
-      </div>
-    );
+    var post = this.props.post;
+    if (post.author_id !== parseInt(window.current_userid)) {
+      return( <div></div> );
+    } else {
+      return(
+        <div>
+          <button onClick={this.deletePost}>Delete Picture</button>
+        </div>
+      );
+    }
   }
 });
 

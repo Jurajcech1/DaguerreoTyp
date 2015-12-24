@@ -32,7 +32,7 @@ var Post = React.createClass({
   },
 
   render: function() {
-    var post = this.state.post
+    var post = this.state.post;
     return(
       <div className="show_div clearfix">
         <DeleteButton post={post} />

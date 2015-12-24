@@ -1,6 +1,7 @@
 var React = require('react')
 var ApiUtil = require('../../util/api_util.js');
 var UploadButton = require('../posts/upload_button.jsx');
+var SearchBar = require('./search.jsx');
 var History = require('react-router').History;
 
 var Navbar = React.createClass({
@@ -34,7 +35,7 @@ var Navbar = React.createClass({
         <li className="icon"><h1>DaguerreoTyp</h1></li>
         <li className="logout"><button onClick={this.logoutUser}>Logout</button></li>
         <li className="search">
-          <input type="search" placeholder="search users" />
+          <SearchBar/>
         </li>
       </ul>
       </div>

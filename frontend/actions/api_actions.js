@@ -39,6 +39,13 @@ ApiActions = {
     });
   },
 
+  receiveAllUsers: function (users) {
+    AppDispatcher.dispatch({
+      actionType: UserConstants.USERS_RECEIVED,
+      users: users
+    });
+  },
+
   receiveFollowees: function (followees) {
     AppDispatcher.dispatch({
       actionType: FollowConstants.FOLLOWEES_RECEIVED,

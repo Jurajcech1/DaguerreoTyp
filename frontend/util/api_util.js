@@ -50,6 +50,15 @@ var ApiUtil = {
     });
   },
 
+  fetchAllUsers: function() {
+    $.ajax({
+      url: "api/users",
+      success: function (users) {
+        ApiActions.receiveAllUsers(users);
+      }
+    });
+  },
+
   fetchFollowees: function() {
     $.ajax({
       url: "api/follows",
