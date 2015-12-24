@@ -115,6 +115,9 @@ body {
   margin: 20px;
   border-style: solid;
   color: #686D4F;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .feed_item_username:hover {
@@ -171,6 +174,7 @@ html {
 .comment_index {
   float: left;
   width: 370px;
+  height: 460px;
 }
 
 .single_comment {
@@ -194,7 +198,16 @@ html {
 
 .comment_author {
   float: left;
-  margin: 8px;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.comment_author:hover {
+  background-color: rgba(223, 123, 130, 0.67);
 }
 
 .comment_input_box {
