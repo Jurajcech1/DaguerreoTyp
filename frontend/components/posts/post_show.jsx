@@ -2,6 +2,8 @@ var React = require('react');
 var PostStore = require('../../stores/post.js');
 var ApiUtil = require('../../util/api_util.js');
 var DeleteButton = require('./delete_button.jsx');
+var CommentIndex = require('../comments/comment_index.jsx');
+var CommentForm = require('../comments/comment_form.jsx');
 
 var Post = React.createClass({
   getStateFromStore: function() {
@@ -36,6 +38,10 @@ var Post = React.createClass({
         <DeleteButton post={post} />
         <img className="post_show_picture" src={post.picture_URL} />
         <figcaption className="post_show_caption">{post.caption}</figcaption>
+        <div className="comments_section">
+          <CommentIndex post={post}/>
+          <CommentForm post={post} />
+        </div>
       </div>
     );
   }

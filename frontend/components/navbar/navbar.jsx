@@ -31,10 +31,11 @@ var Navbar = React.createClass({
         <li className="icon">
           Welcome {window.current_username}
         </li>
+        <li className="icon"><h1>DaguerreoTyp</h1></li>
+        <li className="logout"><button onClick={this.logoutUser}>Logout</button></li>
         <li className="search">
           <input type="search" placeholder="search users" />
         </li>
-        <li className="logout"><button onClick={this.logoutUser}>Logout</button></li>
       </ul>
       </div>
     );

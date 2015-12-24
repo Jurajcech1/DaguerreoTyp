@@ -21,9 +21,9 @@ var FeedItem = React.createClass({
     var caption = this.props.followee.most_recent_photo.caption;
     return(
       <li className="feed_item">
-        <h3 onClick={this.nameClick}>{this.props.followee.username}</h3>
+        <h3 className="feed_item_username" onClick={this.nameClick}>{this.props.followee.username}</h3>
+        <div className="feed_item_caption">{caption}</div>
         <img onClick={this.picClick} src={"https://res.cloudinary.com/dbmqufwhv/image/upload/w_500,h_500/" + public_id + ".png"} />
-        <div>{caption}</div>
       </li>
     );
   }

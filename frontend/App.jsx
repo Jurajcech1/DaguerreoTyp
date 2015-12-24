@@ -16,7 +16,6 @@ var App = React.createClass({
     return(
       <div>
         <Navbar/>
-        <header><h1>DaguerreoTyp</h1></header>
         {this.props.children}
       </div>
     );

@@ -80,6 +80,27 @@ var ApiUtil = {
     });
   },
 
+  createNewComment: function(postId, content) {
+    $.ajax({
+      url: "api/posts/" + postId,
+      method: 'PATCH',
+      data: {comment: {content: content, post_id: postId}},
+      success: function (post) {
+        ApiActions.receiveSinglePost(post);
+      }
+    });
+  },
+
+  deleteComment: function(postId, commentId) {
+    $.ajax({
+      url: "api/posts/" + postId + "/edit",
+      data: {comment: {post_id: postId, id: commentId}},
+      success: function (post) {
+        ApiActions.receiveSinglePost(post);
+      }
+    });
+  },
+
   endSession: function() {
     $.ajax({
       url: "/session",

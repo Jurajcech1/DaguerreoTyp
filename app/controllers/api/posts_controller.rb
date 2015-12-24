@@ -17,6 +17,22 @@ class Api::PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    @comment = Comment.find(params[:comment][:id])
+    @comment.destroy
+    render :show
+  end
+
+  def update
+    @comment = Comment.new(comment_params)
+    @comment.author_id = current_user.id
+    if @comment.save!
+      @post = @comment.post
+      render :show
+    end
+  end
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
@@ -27,5 +43,9 @@ class Api::PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:picture_URL, :public_id, :caption)
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content, :post_id)
   end
 end

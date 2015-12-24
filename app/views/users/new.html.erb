@@ -26,6 +26,20 @@
     <input type="submit">
   </form>
 </div>
+<form action="<%= session_url %>" method="post">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <input type="hidden" placeholder="username" name="user[username]" value="Juraj" id="user_username">
+  <br>
+
+  <input type="hidden" placeholder="password" name="user[password]" value="qwerty" id="user_password">
+  <br>
+
+  <input type="submit">Sign in as Guest</input>
+</form>
 <div class="logins_switch">
   <%= link_to "Already a Daguerreotypist? Sign In!", new_session_url %>
 </div>
