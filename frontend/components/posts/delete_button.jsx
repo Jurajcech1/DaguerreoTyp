@@ -18,8 +18,8 @@ var DeleteButton = React.createClass({
       return( <div></div> );
     } else {
       return(
-        <div>
-          <button onClick={this.deletePost}>Delete Picture</button>
+        <div className="post_delete_icon">
+          <i id="post_delete_icon" className="fa fa-times" onClick={this.deletePost}></i>
         </div>
       );
     }

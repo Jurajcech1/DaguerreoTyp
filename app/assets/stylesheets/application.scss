@@ -84,15 +84,34 @@ body {
   width: 600px;
 }
 
+.post_delete_icon {
+  padding: 5px;
+    position: absolute;
+    margin: 5px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #F7E7D3;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.post_delete_icon:hover {
+  background-color: white;
+}
 
 .show_div {
   position: relative;
-  width: 1000px;
+  width: 1020px;
   height: 100%;
   background: rgba(255, 255, 255, 0.73);
   top: 50%;
   left: 48%;
   transform: translate(-50%);
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 10px;
+  border-color: rgba(109, 85, 54, 0.32);
 }
 
 
@@ -194,6 +213,7 @@ html {
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 8px;
+  width: 250px;
 }
 
 .comment_author {
@@ -215,6 +235,13 @@ html {
   border-style: solid;
   margin-right: 10px;
   border-color: #D4C47F;
+  width: 230%;
+  height: 30px;
+}
+
+.comment_input_container {
+  position: absolute;
+  bottom: 10px;
 }
 
 #user_detail {

@@ -18,9 +18,10 @@ var CommentForm = React.createClass({
 
   render: function() {
     return(
-      <div >
-        <input className="comment_input_box" type="text" placeholder="add comment" valueLink={this.linkState('content')}/>
-        <i onClick={this.handleSubmit} className="fa fa-comment-o"></i>
+      <div className="comment_input_container">
+        <form onSubmit={this.handleSubmit}>
+          <input className="comment_input_box" type="textarea" placeholder="add comment" valueLink={this.linkState('content')}/>
+        </form>
       </div>
     );
   }

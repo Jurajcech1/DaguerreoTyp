@@ -23,10 +23,16 @@ var CommentItem = React.createClass({
   render: function() {
     var authorName = this.props.comment.author.username;
     var content = this.props.comment.content;
+    var author = this.props.comment.author.id;
+    var currentId = parseInt(window.current_userid);
+    var deletion = <div id="delete_icon"></div>;
+    if(author === currentId) {
+      deletion = <i id="delete_icon" className="fa fa-times" onClick={this.deleteComment}></i>;
+    }
     return(
       <li className="single_comment clearfix">
         <div className="comment_author" onClick={this.toUser}>{authorName}</div>
-        <i id="delete_icon" className="fa fa-times" onClick={this.deleteComment}></i>
+        {deletion}
         <div className="comment_content">{content}</div>
       </li>
     );
