@@ -30,15 +30,14 @@ var PostForm = React.createClass({
 
   render: function() {
     return(
-      <div>
-        <h2>Add a Caption!</h2>
-        <div>
-          <img src={this._post().url} />
-          <form onSubmit={this.handleSubmit}>
-            <input type="text" valueLink={this.linkState('caption')}/>
-            <input type="submit" value="Create DaguerreoTyp!" />
-          </form>
-        </div>
+      <div className="post_form clearfix">
+        <img className="post_form_image" src={this._post().url} />
+        <br/>
+        <form  onSubmit={this.handleSubmit}>
+          <textarea className="post_form_header" type="text" placeholder="Add a Caption!" valueLink={this.linkState('caption')}></textarea>
+          <br/>
+          <input className="post_form_caption" type="submit" value="Create DaguerreoTyp!" />
+        </form>
       </div>
     );
   }

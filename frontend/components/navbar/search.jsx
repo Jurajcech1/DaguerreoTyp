@@ -60,7 +60,7 @@ var SearchBar = React.createClass({
     } else {
       return(
         <div>
-          <input type="search" placeholder="search users" onChange={this.handleInput} value={this.state.inputVal} />
+          <input className="search_input" type="search" placeholder="search users" onChange={this.handleInput} value={this.state.inputVal} />
           <ul>
             {
               theUsers.map(function (user) {

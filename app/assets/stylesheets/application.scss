@@ -339,6 +339,11 @@ html {
   padding-right: 200px;
 }
 
+.search_input {
+  font-family:'Old Standard TT', serif;
+  font-style: italic;
+}
+
 .comments_section {
   float: left;
   padding-left: 30px;
@@ -445,6 +450,59 @@ html {
 
 .follow_button:hover {
   background-color: rgba(245, 21, 37, 0.35);
+}
+
+.post_form {
+  position: relative;
+  width: 1000px;
+  height: 100%;
+  margin-left: 150px;
+}
+
+.post_form_image {
+  float: left;
+  width: 500px;
+}
+
+.post_form_header {
+  float: left;
+  width: 300px;
+  height: 100px;
+  margin-left: 112px;
+  margin-bottom: 40px;
+  padding: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.57);
+  border-color: rgba(66, 136, 112, 0.4);
+  color: rgba(102, 125, 146, 0.83);
+  font-size: medium;
+  font-family:'Old Standard TT', serif;
+  font-style: italic;
+}
+
+.post_form_caption {
+  float: left;
+  margin-right: 100px;
+  margin-left: 151px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.57);
+  border-color: rgba(66, 136, 112, 0.4);
+  color: rgba(234, 84, 95, 0.83);
+  font-size: medium;
+  font-family:'Old Standard TT', serif;
+  font-style: italic;
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.post_form_caption:hover {
+  background-color: rgba(13, 12, 123, 0.37);
 }
 
 ul {

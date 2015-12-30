@@ -10,7 +10,7 @@ var resetFollowees = function(followees) {
 };
 
 var addFollowee = function(followee) {
-  _followees.push(followee);
+  _followees.unshift(followee);
 };
 
 var deleteFollowee = function(followee) {
@@ -23,7 +23,7 @@ var deleteFollowee = function(followee) {
 };
 
 FollowStore.all = function() {
-  return _followees.slice();
+  return _followees.slice().reverse();
 };
 
 FollowStore.find = function(id) {
