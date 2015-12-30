@@ -27,20 +27,29 @@ var Index = React.createClass({
   },
 
   render: function() {
-    var posts = this.state.posts.map(function(post) {
-      return <IndexItem key={post.id} post={post} />;
-    });
-
-    return(
-      <div>
-        <div className="post_index_ul">
-          <ul>
-            {posts}
-          </ul>
+    if(this.state.posts.length === 0) {
+      return(
+        <div className="empty_index_message">
+          Make a DaguerreoTyp to populate your page!
         </div>
-        {this.props.children}
-      </div>
-    );
+      );
+    } else {
+      var posts = this.state.posts.map(function(post) {
+        return <IndexItem key={post.id} post={post} />;
+      });
+
+      return(
+        <div>
+          <div className="post_index_ul">
+            <ul>
+              {posts}
+            </ul>
+          </div>
+          {this.props.children}
+        </div>
+      );
+    }
+
   }
 });
 

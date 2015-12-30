@@ -18,7 +18,7 @@ var UploadButton = React.createClass({
   render: function() {
     return(
       <div>
-        <button onClick={this.upload}>Make a DaguerreoTyp</button>
+        <button className="navbar_buttons" onClick={this.upload}>Make a DaguerreoTyp</button>
       </div>
     );
   }

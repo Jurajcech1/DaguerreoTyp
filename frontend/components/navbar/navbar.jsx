@@ -26,14 +26,14 @@ var Navbar = React.createClass({
     return(
       <div className="bar">
       <ul className="navbar-ul">
-        <li className="icon icon-1"><button onClick={this.toFeed}>My Feed</button></li>
+        <li className="icon icon-1"><button className="navbar_buttons" onClick={this.toFeed}>My Feed</button></li>
         <li className="icon icon-2"><UploadButton/></li>
-        <li className="icon icon-3"><button onClick={this.toProfile}>My Profile</button></li>
-        <li className="icon">
+        <li className="icon icon-3"><button className="navbar_buttons" onClick={this.toProfile}>My Profile</button></li>
+        <li className="con_name">
           Welcome {window.current_username}
         </li>
-        <li className="icon"><h1>DaguerreoTyp</h1></li>
-        <li className="logout"><button onClick={this.logoutUser}>Logout</button></li>
+        <li className="con_site"><h1>DaguerreoTyp</h1></li>
+        <li className="logout"><button className="navbar_buttons" onClick={this.logoutUser}>Logout</button></li>
         <li className="search">
           <SearchBar/>
         </li>

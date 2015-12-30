@@ -11,18 +11,19 @@
         value="<%= form_authenticity_token %>">
 
       <input type="text"
-             placeholder="username"
+             placeholder=" username"
              name="user[username]"
              id="user_username"
              value="<%= @user.username %>">
       <br>
 
       <input type="password"
-             placeholder="password"
+             placeholder=" password"
              name="user[password]"
              id="user_password"
              value="<%= @user.password %>">
       <br>
+      <input class="login_submit_button" type="submit">
 
     </form>
     <form action="<%= session_url %>" method="post">

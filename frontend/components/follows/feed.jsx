@@ -26,15 +26,23 @@ var Feed = React.createClass({
   },
 
   render: function() {
-    var feeds = this.state.followees.map(function(followee) {
-      return <FeedItem key={followee.id} followee={followee} />;
-     });
+    if(this.state.followees.length === 0) {
+      return(
+        <div className="empty_feed_message">
+          Search Users to Follow to Populate Your Feed!
+        </div>
+      );
+    } else {
+      var feeds = this.state.followees.map(function(followee) {
+        return <FeedItem key={followee.id} followee={followee} />;
+       });
 
-    return(
-      <ul>
-        {feeds}
-      </ul>
-    )
+      return(
+        <ul>
+          {feeds}
+        </ul>
+      );
+    }
   }
 });
 

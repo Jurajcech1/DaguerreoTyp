@@ -57,6 +57,31 @@ body {
   transform: translate(-50%, -50%);
   font-family: 'Old Standard TT', serif;
   font-style: italic;
+  font-size: x-large;
+  color: rgba(29, 111, 111, 0.61);
+}
+
+#user_username {
+  border-style: solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border-color: rgba(128, 128, 128, 0.62);
+  background-color: rgba(255, 255, 255, 0.68);
+  width: 200px;
+}
+
+#user_password {
+  border-style: solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border-color: rgba(128, 128, 128, 0.62);
+  background-color: rgba(255, 255, 255, 0.68);
+  width: 200px;
+}
+
+.login_submit_button {
+  position: absolute;
+  left: -999%;
 }
 
 .logins_switch {
@@ -64,6 +89,15 @@ body {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-decoration: underline;
+  color: rgba(11, 11, 93, 0.49);
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.logins_switch:hover {
+  color: rgba(220, 11, 94, 0.57);
 }
 
 .guest_button {
@@ -160,6 +194,33 @@ body {
   border-color: rgba(109, 85, 54, 0.32);
 }
 
+.empty_feed_message {
+  position: absolute;
+  left: 30%;
+  top: 150px;
+  padding: 50px;
+  margin: 50px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 8px;
+  border-color: rgba(80, 80, 156, 0.31);
+  background-color: rgba(255, 255, 255, 0.58);
+  color: rgba(44, 70, 44, 0.66);
+}
+
+.empty_index_message {
+  position: absolute;
+  left: 27%;
+  top: 240px;
+  padding: 50px;
+  margin: 50px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 8px;
+  border-color: rgba(80, 80, 156, 0.31);
+  background-color: rgba(255, 255, 255, 0.58);
+  color: rgba(44, 70, 44, 0.66);
+}
 
 .feed_item {
   width: 540px;
@@ -200,6 +261,9 @@ body {
 }
 html {
   box-sizing: border-box;
+  cursor: default;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
 }
 .bar {
   top: 0%;
@@ -213,9 +277,53 @@ html {
   z-index: 50;
 }
 
+.navbar_buttons {
+  -moz-box-shadow: 0px 6px 14px -7px #273173;
+	-webkit-box-shadow: 0px 6px 14px -7px #273173;
+	box-shadow: 0px 6px 14px -7px #273173;
+	background-color:rgba(18, 110, 208, 0.4);
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor: default;
+	color:#f2f2f2;
+	font-family:'Old Standard TT', serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:3px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+  font-style: italic;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.navbar_buttons:hover {
+	background-color:#288c8f;
+}
+.navbar_buttons:active {
+	position:relative;
+	top:1px;
+}
+
 .icon {
   float:left;
   margin-left: 20px;
+}
+
+.con_name {
+  float:left;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.con_site {
+  float:left;
+  margin-left: 20px;
+  font-size: 18px;
 }
 
 .logout {
@@ -257,7 +365,6 @@ html {
 
 .comment_content {
   float: left;
-  margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 8px;
   width: 250px;
@@ -284,6 +391,7 @@ html {
   border-color: #D4C47F;
   width: 230%;
   height: 30px;
+  background-color: rgba(255, 255, 255, 0.71);
 }
 
 .comment_input_container {
@@ -308,6 +416,15 @@ html {
   float: left;
   padding: 20px;
   margin-left: 50px;
+  color: rgba(11, 12, 1, 0.46);
+}
+
+.current_user_detail {
+  font-size: 50px;
+  float: left;
+  padding: 20px;
+  margin-left: 300px;
+  color: rgba(11, 12, 1, 0.46);
 }
 
 .follow_button {
@@ -320,6 +437,7 @@ html {
   border-radius: 9px;
   border-color: rgba(0, 0, 0, 0.18);
   border-width: 2px;
+  color: rgba(11, 109, 199, 0.51);
   -webkit-transition: background-color 0.25s;
   -moz-transition: background-color 0.25s;
   transition: background-color 0.25s;
