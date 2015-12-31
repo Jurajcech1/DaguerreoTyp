@@ -61,10 +61,10 @@ var SearchBar = React.createClass({
       return(
         <div>
           <input className="search_input" type="search" placeholder="search users" onChange={this.handleInput} value={this.state.inputVal} />
-          <ul>
+          <ul className="search_option_ul">
             {
               theUsers.map(function (user) {
-                return <li key={user.id} value={user.id} onClick={this.selectName}>{user.username}</li>
+                return <li className="search_option_item" key={user.id} value={user.id} onClick={this.selectName}>{user.username}</li>
               }.bind(this))
             }
           </ul>
