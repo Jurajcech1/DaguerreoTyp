@@ -36,16 +36,19 @@ body {
 }
 
 .logins_container {
-  height: 275px;
-  width: 400px;
+  height: 353px;
+  width: 555px;
   background-color: rgba(255, 255, 255, 0.62);
-  margin-left: 440px;
   border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logins {
   position: fixed;
-  top: 35%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -86,7 +89,7 @@ body {
 
 .logins_switch {
   position: fixed;
-  top: 45%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-decoration: underline;
