@@ -17,12 +17,6 @@ content     | string    | not null
 author_id   | integer   | not null, foreign key (references users), indexed
 post_id     | integer   | not null, foreign key (references posts), indexed
 
-## likes
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (references users), indexed
-post_id     | string    | not null, foreign key (references posts), indexed
 
 ## follows
 column name | data type | details
@@ -31,19 +25,6 @@ id          | integer   | not null, primary key
 follower_id | integer   | not null, foreign key (references users), indexed
 followed_id | integer   | not null, foreign key (references users), indexed
 
-## tags
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-name        | string    | not null
-
-## taggings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-name        | string    | not null
-post_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
-tag_id      | integer   | not null, foreign key (references tags), indexed
 
 ## users
 column name     | data type | details

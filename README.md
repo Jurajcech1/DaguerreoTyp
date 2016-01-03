@@ -15,10 +15,9 @@ Rails and React.js. DaguerreoTyp allows users to:
 - [ ] Log in / Log out
 - [ ] Create and delete posts in the form of uploaded images
 - [ ] Write captions on their posts
-- [ ] Tag posts with multiple tags and search posts by tag
 - [ ] Write comments on their own and other's posts
-- [ ] Like other's posts
 - [ ] Follow other users
+- [ ] Search for other users
 
 ## Design Docs
 * [View Wireframes][view]
@@ -49,12 +48,11 @@ styling the Posts.
 
 [Details][phase-two]
 
-### Phase 3: Users and Tags (2 days)
+### Phase 3: Users (1 day)
 
 As Posts belong to Users, I will make a User page which will contain the index
-of Posts created by that user and create JSON API for the User page. I will
-enable Posts to be tagged with multiple tags. Users can search for tags or other
-Users in a search bar at the top of the User page.
+of Posts created by that user and create JSON API for the User page. Users can
+search for other Users in a search bar in the navbar.
 
 [Details][phase-three]
 
@@ -71,12 +69,11 @@ Comments.
 ### Phase 5: Follows and Likes (1.5 days)
 
 I will implement Users being able to follow each other.  I will create a Follow
-button which will enable a user to follow or unfollow another user.  I will also
-make a Like button on Posts such that users can like or un-like Posts.
+button which will enable a user to follow or unfollow another user.
 
 [Details][phase-five]
 
-### Phase 6: Styling (1.5 days)
+### Phase 6: Styling (3 days)
 
 Some CSS styling will be performed at each phase of the project, however, in
 this phase the bulk of the Styling and prettifying will occur.
